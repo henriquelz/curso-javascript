@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: rgba(9, 96, 146, 0.315);
+             color: black;
+            font: normal 15pt Arial
+            }
+        input#txtonde {
+            width: 300px;
+            height: 30px;
+            color: white;
+            font: normal 15px Arial;
+            background-color: rgb(136, 148, 24);
+            text-align: center;
+            border-radius: 1px;
+            border: none;
+        }
+        input#txtverificar {
+            width: 100px;
+            height: 20px;
+            color: blueviolet;
+            background-color: orangered
+        }
+        div {
+            margin-top: 25px;
+            text-align: center;
+        }
+        #corpo {
+            width: 700px;
+            height: auto;
+            margin: 50px center;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+    <h1>Vocé é de que Nacionalidade?</h1>
+    <input type="text" value = "Onde você mora?" id = "txtonde" >
+    <input type="button" value = "Verificar" id = "txtverificar" onclick="verificar()">
+    <div id="res" >
+        
+       </div>
+
+    <script>
+        function verificar() {
+        var país = document.getElementById('txtonde')
+        var res = document.querySelector('div#res')
+        var nacionalidade = String(país.value)
+
+        res.innerHTML += `<p>Atualmente voce vive no ${nacionalidade}.</p>`
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML += `Então voce é brasileiro`
+            } else {
+                res.innerHTML += `Você nao é daqui, é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

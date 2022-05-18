@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br  ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color: rgba(12, 58, 1, 0.877);
+            color: rgb(255, 153, 0);
+            font: normal 18pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos DOM</h1>
+    <p>aqui vai um resultado</p>
+    <p>aprendendo a usar o meu <strong>DOM</strong> em JS
+    <div id = "msg">clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] // por MARCA //
+        window.document.write('Está escito assim: ' + p1.innerHTML) //InnerText pega apenas o Texto
+        p1.style.color = 'white'
+        var d = window.document.getElementById('msg') // por id //
+        d.style.background = 'blue'
+        // window.document.getElementById('msg').innerText = 'Olá'//    
+        //d.innerText='Aguardando'//  
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = "red"
+         </script>
+</body>
+</html>

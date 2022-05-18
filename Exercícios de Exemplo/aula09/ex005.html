@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando Seleçoes DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1> Acesso ao DOM</h1>
+    <p>Árvore <strong>DOM</strong></p> <!--Paragrafo de nº 0-->
+    <p>Document Object Model</p> <!-- Paragrafo de nº 1 -->
+    <div id="msg">Clique em min</div>
+    <script>
+        var d = window.document.querySelector('div#msg') /* em Class é . ,
+         em Id é # */
+
+
+        d.backgroundColor = 'yellow'
+        d.style.background = "green" //Modoficando o Html a partir do seletor
+        d.innerText = 'Estou aqui'
+    </script>
+</body>
+</html>
